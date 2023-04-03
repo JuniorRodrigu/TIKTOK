@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./video.css";
 
 function Video() {
-  return(
-  <div className='video'>
-   
-    <video className='video__playar' src="https://youtu.be/7MgJ5OoMwgw?t=7">
-        
-    </video>
-  </div>
+
+
+  const videoRef = useRef(null)
+  const [ play, setPlay ] = useState(false)
+
+  function handdlsStast() {
+    if (play) {
+      videoRef.current.pause()
+      setPlay(false)
+    }else{
+     videoRef.current.play()
+      setPlay(true)
+    }
+  }
+  return (
+    <div className='video'>
+      <video className='video__playar'
+        ref={videoRef}
+        onClick={handdlsStast}
+        loop
+        src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4">
+      </video>
+    </div>
 
   )
 }
