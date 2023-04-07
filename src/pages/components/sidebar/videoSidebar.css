@@ -1,0 +1,15 @@
+.videoSidebar{
+    position: absolute;
+    top :50%;
+    right: 9%; 
+    color:wheat ;
+}
+.videoSidebar__options p{
+    margin: 0;
+  
+    text-align: center;
+   
+}
+.videoSidebar__options{
+    padding: 12%;
+}

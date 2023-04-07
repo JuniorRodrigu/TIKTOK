@@ -1,21 +1,25 @@
 import React from "react";
 import "./videoFooter.css";
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+
 function VideoFooter() {
   return (
-    <div className="videofooter">
-      <div className="videoFoorer__text">
-        <h3>@junior</h3>
-        <p>Discriçao do video</p>
-        <div className="videoFooter__music">
-        <MusicNoteIcon/>
-        <p>Titulo da musica</p>
+    <div className="videoFooter">
+      <div className="videoFooter__text">
+        <h3>@junior rodrigues</h3>
+        <p>descriçao do video</p>
+        <div className="videoFooter__misic">
+          <MusicNoteIcon className="videoFooter__icon" />
+          <div className="videoFooterMusic__text">
+            <p>titulo da musica</p>
+          </div>
+
         </div>
       </div>
       <img
-      className="videoFooetr__record"
-      alt="Imagem de um vinil girando"
-      src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/vinil.png"
+        className="videoFooetr__record"
+        alt="Imagem de um vinil girando"
+        src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/vinil.png"
       />
     </div>
   );
