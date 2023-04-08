@@ -3,7 +3,7 @@ import "./video.css";
 import VideoFooter from "./components/footer/VideoFooter";
 import VideoSidebar from "./components/sidebar/VideoSidebar";
 
-function Video() {
+function Video({likrs, messagens, shares, name, descriptions, music, url}) {
 
 
   const videoRef = useRef(null)
@@ -24,13 +24,20 @@ function Video() {
         ref={videoRef}
         onClick={handdlsStast}
         loop
-        src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4">
+        src={url}>
       </video>
-      <VideoFooter/>
-      <VideoSidebar/>
+      <VideoSidebar
+       likrs={likrs}
+       messagens={messagens} 
+       shares={shares}/>
+   
+    <VideoFooter
+    name={name}
+    descriptions={descriptions}
+    music={music}/>
     </div>
     
-
+    
 
   )
 }
